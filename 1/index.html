@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to PENNIE!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PENNIE(Budget Calculator)</h1>
+        
+        <div class="input-section">
+            <div class="form-group">
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="monthlySalary">Monthly Salary:</label>
+                <input type="number" id="monthlySalary" placeholder="Enter your monthly salary">
+            </div>
+            <button id="calculateBtn">Calculate Budget</button>
+        </div>
+
+        <div id="defaultBudget" class="budget-section hidden">
+            <h2>Default Budget Distribution</h2>
+            <div class="budget-details">
+                <p>Wants: 50% - <span id="wantsAmount"></span></p>
+                <p>Needs: 30% - <span id="needsAmount"></span></p>
+                <p>Savings: 20% - <span id="savingsAmount"></span></p>
+            </div>
+            <div class="preference-buttons">
+                <button id="acceptDefault">Accept Default</button>
+                <button id="customizeBudget">Customize Budget</button>
+            </div>
+        </div>
+
+        <div id="customBudget" class="budget-section hidden">
+            <h2>Customize Your Budget</h2>
+            <div class="budget-details">
+                <p>Available Amount: <span id="availableAmount"></span></p>
+                <p>Savings: <span id="customSavings"></span></p>
+            </div>
+            <div class="form-group">
+                <label for="rent">Rent:</label>
+                <input type="number" id="rent" placeholder="Enter rent amount">
+            </div>
+            <div class="form-group">
+                <label for="food">Food:</label>
+                <input type="number" id="food" placeholder="Enter food expenses">
+            </div>
+            <div class="form-group">
+                <label for="bills">Bills:</label>
+                <input type="number" id="bills" placeholder="Enter bill amount">
+            </div>
+            <div class="form-group">
+                <label for="travel">Travel:</label>
+                <input type="number" id="travel" placeholder="Enter travel expenses">
+            </div>
+            <div class="form-group">
+                <label for="miscellaneous">Miscellaneous:</label>
+                <input type="number" id="miscellaneous" placeholder="Enter miscellaneous expenses">
+            </div>
+            <button id="submitCustomBudget">Submit Custom Budget</button>
+        </div>
+
+        <div id="result" class="budget-section hidden">
+            <h2>Your Budget Distribution</h2>
+            <div class="budget-details" id="finalBudget">
+                <!-- Budget details will be populated here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
